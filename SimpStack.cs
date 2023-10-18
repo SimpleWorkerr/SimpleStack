@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
@@ -39,6 +40,21 @@ namespace SimpleStack
             Count--;
 
             return value;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            Node<T>? tempNode = pTail;
+
+            while(tempNode != null)
+            {
+                stringBuilder.Append($"{tempNode.Data?.ToString() ?? "Данных нет"}");
+                tempNode = tempNode.pPrev;
+            }
+
+            return stringBuilder.ToString();
         }
     }
 }

@@ -16,6 +16,6 @@ namespace SimpleStack
             Data = data;
             pPrev = prevNode;
         }
-        
+ 
     }
 }

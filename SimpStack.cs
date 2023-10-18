@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimpleStack
 {
-    internal class SimpStack<T>:IEnumerable<T>
+    internal class SimpStack<T>
     {
         Node<T>? pTail;
         public int Count { get; private set; }
@@ -40,9 +40,5 @@ namespace SimpleStack
 
             return value;
         }
-
-        public IEnumerator GetEnumerator()
-            => ((IEnumerable)this).GetEnumerator();
-
     }
 }
